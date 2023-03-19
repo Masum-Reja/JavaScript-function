@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>DOM (Document Object Model)</h1>
+
+    <p id="jantoos">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque deleniti
+      in odit libero rem? Quia consequatur earum optio dolores nemo nobis iure,
+      tempora, quasi rerum itaque minima illum ducimus tenetur!
+
+    </p>
+    <img src="ma-meye.jpg" alt="" width="100% " hight="80%">
+
+    <section id="sec">
+      <ul id="idName">
+        <h1>Naming List</h1>
+        <li>Khadija</li>
+        <li>khatun</li>
+        <li>Ony</li>
+        <li>Rafea</li>
+        <li>okk..</li>
+      </ul>
+      <button id="main">Purchase Now</button>
+
+      <input placeholder="Enter some text" name="name" />
+      <p id="values"></p>
+
+      <script>
+      document.getElementById("main")
+          .addEventListener('click', function () {
+
+            console.log("elm")
+          })
+          
+        let name = document.getElementById("main").parentNode.nodeName;
+        console.log(name);
+
+        const input = document.querySelector('input');
+        const log = document.getElementById('values');
+
+        input.addEventListener('input', updateValue);
+        
+        function updateValue(e) {
+          log.textContent = e.target.value;
+        }
+        </script>
+    </section>
+
+    <script src="dom.js"></script>
+  </body>
+
+</html>
